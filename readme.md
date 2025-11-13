@@ -5,7 +5,7 @@ We have provided the base code to get you started.
 
 ## LO-FI
 Remember these are LO-FI and should only be treated as such.
-![lofi](https://raw.githubusercontent.com/vroomvroomeddy-dev/recruit-react/main/lofi.png)
+![lofi](https://github.com/vroomvroomeddy-dev/react/blob/main/lofi.png)
 
 ## Spec
 These are the only functional requirements for your implementation:
