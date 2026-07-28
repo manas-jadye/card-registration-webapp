@@ -1,0 +1,39 @@
+@import "../../styles/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: #{$spacing-unit * 2};
+  padding: #{$spacing-unit * 2};
+  border-bottom: 2px solid $color-border;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    outline-offset: 2px;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}

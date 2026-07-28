@@ -1,0 +1,95 @@
+@import "../../styles/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.welcome {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: #{$spacing-unit * 3};
+  margin-top: auto;
+  padding-top: #{$spacing-unit * 4};
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: #{$spacing-unit};
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  input {
+    height: 44px;
+    width: 100%;
+    padding: 0 #{$spacing-unit * 1.5};
+    border: 2px solid $color-border;
+    border-radius: $border-radius;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: $color-background;
+    color: $color-text;
+
+    &:focus-visible {
+      outline: 2px solid $color-focus;
+      outline-offset: 2px;
+    }
+
+    &[aria-invalid="true"] {
+      border-color: $color-error;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  gap: #{$spacing-unit * 2};
+
+  .field {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.error {
+  color: $color-error;
+  font-size: 0.8rem;
+}
+
+.success {
+  margin: 0;
+  color: $color-success;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.submit {
+  height: 48px;
+  border: 2px solid $color-border;
+  border-radius: $border-radius;
+  background-color: $color-text;
+  color: $color-background;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    outline-offset: 2px;
+  }
+}
