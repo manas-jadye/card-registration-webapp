@@ -1,4 +1,52 @@
-.demo {
-  font-family: "Roboto";
-  color: orange;
+@import "./styles/variables";
+
+:global(html),
+:global(body) {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  background-color: $color-page-background;
+}
+
+:global(*),
+:global(*::before),
+:global(*::after) {
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  @media (min-width: 480px) {
+    padding: #{$spacing-unit * 4} #{$spacing-unit * 2};
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: $max-width;
+  min-height: 100vh;
+  background-color: $color-background;
+  color: $color-text;
+
+  @media (min-width: 480px) {
+    min-height: 640px;
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 2px solid $color-border;
+    border-radius: $border-radius;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: #{$spacing-unit * 2} #{$spacing-unit * 3};
 }
